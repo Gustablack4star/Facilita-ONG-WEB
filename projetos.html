@@ -3,76 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Transformando Vidas | Facilita ONG</title> 
-    <meta name="description" content="A plataforma oficial da ONG, conheça nosso trabalho, saiba como ser voluntário ou seja um doador.">
-
+    <title>Facilita ONG - Como Doar</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<main id="main-content">
-    <section id="todos-projetos" aria-labelledby="projetos-titulo">
-        <h1 id="projetos-titulo">Nossos Projetos de Transformação</h1> 
-        <p class="intro-text">Descubra as diversas áreas de atuação da Facilita ONG. Filtrar e conheça o impacto que geramos.</p>
-        
-        <nav class="project-filters" aria-label="Filtro de Projetos">
-            <a href="#" data-filter="todos" class="filter-button active">Todos</a>
-            <a href="#" data-filter="educacao" class="filter-button">Educação</a>
-            <a href="#" data-filter="saude" class="filter-button">Saúde</a>
-            <a href="#" data-filter="meioambiente" class="filter-button">Meio Ambiente</a>
-            <a href="#" data-filter="tecnologia" class="filter-button">Tecnologia</a>
-        </nav>
-
-        <div class="cards-grid project-grid-full"> 
+<body>
+        <header>
+        <nav class="container">
+            <!-- LOGO DO SITE -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
+            </a>
             
-            <article class="projeto-card full-details" data-category="educacao">
-                <h3>Projeto Alpha: Alfabetização Digital</h3>
-                <p>Foco na inclusão digital de idosos, oferecendo aulas e equipamentos. Ajude-nos a levar conhecimento.</p>
-                <div class="project-meta">
-                    <span class="indicator">Meta: 500 alunos</span>
-                    <span class="indicator primary-indicator">Status: 85% Concluído</span>
-                </div>
-                <a href="#" class="cta-button primary">Detalhes e Doar</a>
-            </article>
+            <!-- BOTÃO HAMBÚRGUER-->
+            <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+                &#9776; <!-- Ícone de hambúrguer -->
+            </button>
+            
+            <!-- MENU PRINCIPAL DROPDOWN -->
+            <ul id="main-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                
+                <!-- ITEM COM DROPDOWN -->
+                <li class="dropdown" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Causas <span class="arrow">&#9662;</span> 
+                    </a>
+                    <!-- SUBMENU -->
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="projetos.html" role="menuitem">Projetos Atuais</a></li>
+                        <li role="none"><a href="voluntariado.html" role="menuitem">Voluntariado</a></li>
+                        <li role="none"><a href="doacoes.html" role="menuitem">Como Doar</a></li>
+                    </ul>
+                </li>
+                
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre Nós</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+                <li role="none"><a href="cadastro.html" role="menuitem" class="cta-button primary">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIM DO HEADER -->
 
-            <article class="projeto-card full-details" data-category="saude">
-                <h3>Saúde Comunitária Itinerante</h3>
-                <p>Levar serviços básicos de saúde, vacinação e orientação a comunidades carentes da periferia.</p>
-                <div class="project-meta">
-                    <span class="indicator">Meta: 1000 atendimentos</span>
-                    <span class="indicator">Status: 50% Concluído</span>
+    <!--MAIN-->
+    <main id="main-content">
+        <section id="doacoes" class="container section-padding" aria-labelledby="doacao-titulo">
+            <h1 id="doacao-titulo" class="text-center">Sua Doação Transforma Vidas</h1>
+            <p class="text-center">Escolha a melhor forma de contribuir. Toda ajuda é transparente e direcionada aos nossos projetos.</p>
+            
+            <div class="grid-12-col">
+                
+                <!-- Opção 1: Doação Monetária  -->
+                <div class="card" style="grid-column: span 12; @media (min-width: 1024px) { grid-column: span 8; }">
+                    <h2>Doação Via PIX</h2>
+                    <p>A forma mais rápida e segura de doar. Escaneie o QR Code abaixo ou utilize a chave PIX.</p>
+                    <div class="tag-container">
+                        <span class="badge urgente">Chave PIX:</span>
+                        <span class="badge educacao">contato@facilitaong.org.br</span>
+                    </div>
+                    <p></p>
+                    <a href="#" class="cta-button secondary">Confirmar Doação</a>
                 </div>
-                <a href="#" class="cta-button secondary">Seja Voluntário</a>
-            </article>
 
-            <article class="projeto-card full-details" data-category="meioambiente">
-                <h3>Horta Sustentável Urbana</h3>
-                <p>Produção de alimentos orgânicos para famílias de baixa renda, promovendo sustentabilidade local.</p>
-                <div class="project-meta">
-                    <span class="indicator">Meta: 5 hortas instaladas</span>
-                    <span class="indicator">Status: 100% (Concluído!)</span>
+                <!-- Opção 2: Doação de Itens -->
+                <div class="card" style="grid-column: span 12; @media (min-width: 1024px) { grid-column: span 4; }">
+                    <h2>Doação de Itens</h2>
+                    <p>Aceitamos alimentos não perecíveis, materiais escolares e roupas em bom estado.</p>
+                    <a href="contato.html" class="cta-button primary">Agendar Retirada</a>
                 </div>
-                <a href="#" class="cta-button secondary">Ver Conquistas</a>
-            </article>
+                
+            </div>
+        </section>
+    </main>
 
-            <article class="projeto-card full-details" data-category="tecnologia">
-                <h3>Coder do Futuro</h3>
-                <p>Curso de programação básica para jovens de 14 a 18 anos, abrindo portas no mercado de trabalho.</p>
-                <div class="project-meta">
-                    <span class="indicator">Meta: 80 alunos</span>
-                    <span class="indicator primary-indicator">Status: 60% em andamento</span>
-                </div>
-                <a href="#" class="cta-button primary">Patrocine uma Turma</a>
-            </article>
-
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="contato.html">Política de Privacidade</a></p>
         </div>
-    </section>
+    </footer>
+    
+    <!-- Script para funcionalidade do menu hambúrguer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainMenu = document.getElementById('main-menu');
+            const dropdowns = document.querySelectorAll('.dropdown > a');
 
-    <section id="galeria-atividades" aria-labelledby="galeria-titulo">
-        <h2 id="galeria-titulo">Galeria de Atividades e Impacto</h2>
-        <p>Veja com seus próprios olhos o resultado do nosso trabalho e da sua ajuda!</p>
-        
-        <div class="photo-gallery-placeholder">
-        </div>
-    </section>
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                mainMenu.classList.toggle('active');
+            });
 
-</main>
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth < 768) { 
+                        e.preventDefault(); 
+                        const parentLi = this.closest('.dropdown');
+                        parentLi.classList.toggle('active');
+                        this.setAttribute('aria-expanded', parentLi.classList.contains('active'));
+                    }
+                });
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    mainMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

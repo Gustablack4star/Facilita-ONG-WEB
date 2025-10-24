@@ -1,39 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Transformando Vidas | Facilita ONG</title> 
-    <meta name="description" content="A plataforma oficial da ONG, conheça nosso trabalho, saiba como ser voluntário ou seja um doador.">
-
+    <title>Facilita ONG - Seja Voluntário</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main id="main-content">
-        <section id="portal-voluntario" aria-labelledby="voluntario-titulo">
-            <h1 id="voluntario-titulo">Portal de Oportunidades de Voluntariado</h1>
-            <p>Sua paixão pode transformar o mundo! Veja as áreas que precisam de ajuda e candidate-se agora.</p>
-
-            <div class="cards-grid">
-                <article class="opportunity-card">
-                    <h3>Instrutor de Informática</h3>
-                    <p>Requisito: Conhecimento em Pacote Office e didática. Duração: 3 meses. Local: Presencial.</p>
-                    <a href="#" class="cta-button primary">Candidatar-se Agora</a>
-                </article>
-                <article class="opportunity-card">
-                    <h3>Designer Gráfico (Remoto)</h3>
-                    <p>Requisito: Criação de peças para redes sociais. Duração: Flexível. Local: Remoto.</p>
-                    <a href="#" class="cta-button primary">Candidatar-se Agora</a>
-                </article>
-            </div>
+    
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
+            </a>
             
-            <div class="cadastro-voluntario">
-                 <h2>Ainda não encontrou? Cadastre seu interesse.</h2>
-                 <script src="js/main.js"></script>
-                 </div>
+            <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+                &#9776; <!-- Ícone de hambúrguer -->
+            </button>
+            
+            <!-- MENU PRINCIPAL-->
+            <ul id="main-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
+                
+                <!-- ITEM COM DROPDOWN -->
+                <li class="dropdown" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Causas <span class="arrow">&#9662;</span> 
+                    </a>
+                    <!-- SUBMENU -->
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="projetos.html" role="menuitem">Projetos Atuais</a></li>
+                        <li role="none"><a href="voluntariado.html" role="menuitem">Voluntariado</a></li>
+                        <li role="none"><a href="doacoes.html" role="menuitem">Como Doar</a></li>
+                    </ul>
+                </li>
+                
+                <li role="none"><a href="sobre.html" role="menuitem">Sobre Nós</a></li>
+                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
+                <li role="none"><a href="cadastro.html" role="menuitem" class="cta-button primary">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIM DO CABEÇALHO -->
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <main id="main-content">
+        <section id="voluntariado-info" class="container section-padding" aria-labelledby="voluntariado-titulo">
+            <h1 id="voluntariado-titulo" class="text-center">Junte-se ao Nosso Time de Voluntários</h1>
+            <p class="text-center">Sua dedicação é o coração da Facilita ONG. Encontre a área que mais combina com você!</p>
+            
+            <div class="card" style="margin-top: var(--espaco-xl);">
+                <h2>Áreas de Atuação</h2>
+                <ul style="list-style: disc; margin-left: var(--espaco-lg);">
+                    <li>**Apoio Escolar:** Reforço em português e matemática.</li>
+                    <li>**Distribuição:** Auxílio na separação e entrega de alimentos e kits.</li>
+                    <li>**Administrativo:** Ajuda na organização de documentos e eventos.</li>
+                    <li>**Comunicação:** Produção de conteúdo e gestão de redes sociais.</li>
+                </ul>
+                <p style="margin-top: var(--espaco-md);">Para se candidatar, preencha o formulário de Cadastro completo, indicando suas áreas de interesse e disponibilidade.</p>
+                <a href="cadastro.html" class="cta-button primary">Ir para o Cadastro</a>
+            </div>
         </section>
     </main>
-    </body>
+
+    <!--FOOTEr-->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="contato.html">Política de Privacidade</a></p>
+        </div>
+    </footer>
+    
+    <!-- Script para funcionalidade do menu hambúrguer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainMenu = document.getElementById('main-menu');
+            const dropdowns = document.querySelectorAll('.dropdown > a');
+
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                mainMenu.classList.toggle('active');
+            });
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth < 768) { 
+                        e.preventDefault(); 
+                        const parentLi = this.closest('.dropdown');
+                        parentLi.classList.toggle('active');
+                        this.setAttribute('aria-expanded', parentLi.classList.contains('active'));
+                    }
+                });
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    mainMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
 </html>
