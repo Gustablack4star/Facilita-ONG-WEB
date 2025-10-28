@@ -1,17 +1,21 @@
-/* VARIÁVEIS CSS*/
+/* PALETA DE CORES  */
 :root {
     /* Cores Primárias */
     --cor-primaria: #007bff;        
-    --cor-primaria-clara: #3399ff; 
-    --cor-secundaria: #28a745;    
+    --cor-primaria-clara: #3399ff;  
+    --cor-secundaria: #28a745;       
     
     /* Cores Neutras */
-    --cor-neutra-fundo: #f4f7f9;   
-    --cor-neutra-fundo-escuro: #343a40;
+    --cor-neutra-fundo: #f4f7f9;    
+    --cor-neutra-fundo-escuro: #343a40; 
     --cor-neutra-texto: #333333;    
-    --cor-neutra-borda: #dddddd;
-    --cor-neutra-branco: #ffffff; 
+    --cor-neutra-borda: #dddddd;    
+    --cor-neutra-branco: #ffffff;   
 
+    /* Cores de Feedback */
+    --cor-sucesso: #28a745;        
+    --cor-erro: #dc3545;            
+    --cor-aviso: #ffc107;           
     /* Espaçamento e Layout */
     --espaco-xs: 4px;
     --espaco-sm: 8px;
@@ -34,7 +38,7 @@
     --transicao-rapida: all 0.3s ease;
 }
 
-/* 2. BASE RESET & TIPOGRAFIA*/
+/* BASE RESET & TIPOGRAFIA           */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,7 +69,7 @@ a:hover {
     color: var(--cor-primaria-clara);
 }
 
-/*LAYOUT*/
+/* 3. UTILITIES DE LAYOUT               */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -107,7 +111,7 @@ a:hover {
     }
 }
 
-/*BOTÕES E COMPONENTES CTA          */
+/* BOTÕES E COMPONENTES CTA          */
 .cta-button {
     display: inline-block;
     padding: var(--espaco-md) var(--espaco-lg);
@@ -139,7 +143,7 @@ a:hover {
     border-color: #218c3b;
 }
 
-/*HEADER E NAVEGAÇÃO */
+
 header {
     background-color: var(--cor-neutra-branco);
     box-shadow: var(--sombra-padrao);
@@ -155,10 +159,22 @@ header .container {
     align-items: center;
 }
 
-.header-logo {
-    max-height: 40px; 
-    width: auto;
+.logo { /* Regra já existente */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Garante que o link não seja sublinhado */
+    color: var(--cor-neutra-texto); /* Define a cor do texto do logo */
+    font-weight: 700;
+    font-size: var(--tamanho-lg); /* Tamanho do texto do logo */
 }
+
+/* Estilos para o EMOJI do logo */
+.logo-emoji {
+    font-size: var(--tamanho-l); /* Tamanho do emoji */
+    margin-right: var(--espaco-sm); /* Espaço entre o emoji e o texto */
+    line-height: 1; /* Alinha o emoji verticalmente */
+}
+
 
 /* Menu Principal (Desktop) */
 #main-menu {
@@ -208,7 +224,7 @@ header .container {
     background-color: var(--cor-neutra-fundo);
 }
 
-/* Menu Toggle */
+/* Menu Toggle (Mobile) */
 .menu-toggle {
     display: none; /* Escondido por padrão no desktop */
     font-size: var(--tamanho-xl);
@@ -218,8 +234,9 @@ header .container {
     color: var(--cor-neutra-texto);
 }
 
-/* HEADDER MOBILE */
-
+/* ==================================== */
+/* 6. RESPONSIVIDADE DO HEADER (MOBILE) */
+/* ==================================== */
 @media (max-width: 767px) {
     .menu-toggle {
         display: block; /* Mostra o botão no mobile */
@@ -285,7 +302,6 @@ header .container {
 }
 
 
-/* 7. CARD */
 .card {
     background-color: var(--cor-neutra-branco);
     border-radius: var(--raio-borda);
@@ -303,7 +319,7 @@ header .container {
     margin-bottom: var(--espaco-md);
 }
 
-/*BADGES/TAGS*/
+/*BADGES/TAGS */
 .tag-container {
     margin-bottom: var(--espaco-sm);
     display: flex;
@@ -318,21 +334,21 @@ header .container {
     font-size: var(--tamanho-sm);
     font-weight: 600;
     color: var(--cor-neutra-branco);
-    background-color: #6c757d; /* Cinza Padrão */
+    background-color: #6c757d; 
 }
 .badge.urgente {
-    background-color: #dc3545; /* Vermelho */
+    background-color: #dc3545; 
 }
 .badge.educacao {
-    background-color: var(--cor-primaria); /* Azul */
+    background-color: var(--cor-primaria); 
 }
 .badge.saude {
-    background-color: #ffc107; /* Amarelo */
+    background-color: #ffc107; 
     color: var(--cor-neutra-texto);
 }
 
 
-/*CAMPOS DE FORMULÁRIO  */
+/* CAMPOS DE FORMULÁRIO  */
 .field-group {
     display: flex;
     flex-direction: column;
@@ -350,6 +366,7 @@ header .container {
 .field-group input[type="tel"],
 .field-group input[type="date"],
 .field-group input[type="number"],
+.field-group input[type="password"], /* Adicionado type=password */
 .field-group select,
 .field-group textarea {
     padding: var(--espaco-sm);
@@ -367,7 +384,7 @@ header .container {
     outline: none;
 }
 
-/* Layout para campos em linha*/
+/* Layout para campos em linha */
 .inline-fields {
     display: flex;
     gap: var(--espaco-md);
@@ -378,10 +395,6 @@ header .container {
         gap: 0;
     }
 }
-
-/*ESTILOS ESPECÍFICOS PARA SEÇÕES*/
-
-/* Estilo para a imagem na página "Sobre Nós" */
 .section-image {
     width: 100%;
     height: auto;
@@ -432,7 +445,30 @@ header .container {
     }
 }
 
-/*COMPONENTES DE FEEDBACK E ALERT*/
+/* Estilo para o campo inválido */
+.field-group input.is-invalid,
+.field-group select.is-invalid,
+.field-group textarea.is-invalid {
+    border-color: var(--cor-erro) !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Estilo para o campo válido */
+.field-group input.is-valid,
+.field-group select.is-valid,
+.field-group textarea.is-valid {
+    border-color: var(--cor-sucesso) !important;
+}
+
+/* Mensagem de err */
+.validation-feedback {
+    color: var(--cor-erro);
+    font-size: var(--tamanho-sm);
+    margin-top: var(--espaco-xs);
+    display: none; /* Controlado pelo JS */
+}
+
+/* COMPONENTES DE FEEDBACK  */
 .alert {
     padding: var(--espaco-md);
     margin-bottom: var(--espaco-lg);
@@ -443,22 +479,20 @@ header .container {
 
 .alert.success {
     color: var(--cor-sucesso);
-    background-color: rgba(40, 167, 69, 0.1); /* Verde muito claro */
+    background-color: rgba(40, 167, 69, 0.1); 
     border-color: var(--cor-sucesso);
 }
 
 .alert.error {
     color: var(--cor-erro);
-    background-color: rgba(220, 53, 69, 0.1); /* Vermelho muito claro */
+    background-color: rgba(220, 53, 69, 0.1); 
     border-color: var(--cor-erro);
 }
 
 .alert.warning {
     color: var(--cor-aviso);
-    background-color: rgba(255, 193, 7, 0.1); /* Amarelo muito claro */
-    border-color: var(--cor-aviso);
+    background-color: rgba(255, 193, 7, 0.1); 
 }
-/*FOOTER */
 
 footer {
     margin-top: auto; /* Garante que o footer fique no final da página */

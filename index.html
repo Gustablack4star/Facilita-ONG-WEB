@@ -3,122 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilita ONG - Início</title>
+    <title>Facilita ONG - Transformando Vidas através da Ação Social</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ícones Font Awesome para o menu e seções -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fonte Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <!-- INÍCIO DO CABEÇALHO -->
+
+    <!-- CABEÇALHO -->
     <header>
-        <nav class="container">
-            <!-- LOGO DO SITE -->
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
-            </a>
+        <div class="container">
+            <a href="index.html">
+<a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>            </a>
             
-            <!-- BOTÃO HAMBÚRGUER MOBILE-->
-            <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
-                &#9776; <!-- Ícone de hambúrguer -->
-            </button>
-            
-            <!-- MENU PRINCIPA DROPDOWN -->
-            <ul id="main-menu" role="menubar">
-                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
-                
-                <!-- ITEM COM DROPDOWN -->
-                <li class="dropdown" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Causas <span class="arrow">&#9662;</span> 
-                    </a>
-                    <!-- SUBMENU -->
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="none"><a href="projetos.html" role="menuitem">Projetos Atuais</a></li>
-                        <li role="none"><a href="voluntariado.html" role="menuitem">Voluntariado</a></li>
-                        <li role="none"><a href="doacoes.html" role="menuitem">Como Doar</a></li>
-                    </ul>
-                </li>
-                
-                <li role="none"><a href="sobre.html" role="menuitem">Sobre Nós</a></li>
-                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
-                <li role="none"><a href="cadastro.html" role="menuitem" class="cta-button primary">Cadastre-se</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <!-- Botão de menu para telas pequenas  -->
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul id="main-menu">
+                    <li><a href="index.html">Início</a></li>
+                    
+                    <!-- Dropdown de Causas -->
+                    <li class="dropdown">
+                        <a href="doacoes.html">Causas <span class="arrow"><i class="fas fa-chevron-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html">Nossos Projetos</a></li>
+                            <li><a href="doacoes.html">Doações</a></li>
+                            <li><a href="voluntariado.html">Voluntariado</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    
+                    <!-- Botão de Cadastro  -->
+                    <li><a href="cadastro.html" class="cta-button primary">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!-- Fim do HEADER -->
 
-    <!-- SEÇÃO PRINCIPAL -->
-    <main id="main-content">
-        <!-- Seção Hero/Destaque -->
-        <section id="hero" class="container" aria-labelledby="hero-title">
-            <h1 id="hero-title">Transformando Vidas Através da Ação Social</h1>
-            <img src="assets/images/home_hero.jpg" 
-                 alt="Grupo de voluntários, representando a ação social da ONG." 
-                 class="hero-image">
-            <p class="intro-text">A Facilita ONG conecta você a causas importantes, simplificando o processo de doação e voluntariado com total transparência.</p>
-            <a href="projetos.html" class="cta-button primary">Ver Projetos</a>
-            <a href="doacoes.html" class="cta-button secondary">Doar Agora</a>
-        </section>
+    <div id="main-content" class="flex-grow-1">
+        <main>
+            <!--SEÇÃO HERO -->
+            <section id="hero" class="section-padding container">
+                <img src="assets/images/hero-social.png" alt="Grupo de pessoas sorrindo em ação social" class="hero-image" onerror="this.onerror=null; this.src='https://placehold.co/900x450/4299e1/ffffff?text=Acao+Social+Facilita'">
 
-        <!-- Seção de Visão Geral -->
-        <section id="visao-geral" class="container section-padding" aria-labelledby="visao-titulo">
-            <h2 id="visao-titulo" class="text-center">Como Ajudamos a Comunidade</h2>
-            <div class="grid-12-col">
-                <article class="card">
-                    <h3>Educação</h3>
-                    <p>Oferecemos aulas de reforço e material escolar para crianças e jovens em situação de vulnerabilidade.</p>
-                </article>
-                <article class="card">
-                    <h3>Saúde e Bem-Estar</h3>
-                    <p>Promovemos campanhas de higiene, distribuição de medicamentos e orientação médica básica.</p>
-                </article>
-                <article class="card">
-                    <h3>Combate à Fome</h3>
-                    <p>Distribuição mensal de cestas básicas, roupas e cobertores em comunidades carentes.</p>
-                </article>
-            </div>
-        </section>
-    </main>
+                <h1>Conectando o Coração da Comunidade com a Ajuda que Transforma</h1>
+                <p class="intro-text">A Facilita ONG atua como ponte, garantindo que recursos, tempo e paixão cheguem onde mais são necessários. Sua doação é o motor da mudança.</p>
+                
+                <div class="cta-group">
+                    <a href="doacoes.html" class="cta-button primary">Faça uma Doação</a>
+                    <a href="voluntariado.html" class="cta-button secondary">Seja um Voluntário</a>
+                </div>
+            </section>
 
-    <!-- RODAPÉ (FOOTER) - Elemento Final -->
+            <!-- Visão Geral dos Projetos -->
+            <section id="causas" class="section-padding" style="background-color: var(--cor-neutra-fundo);">
+                <div class="container text-center">
+                    <h2>Nossas Principais Áreas de Impacto</h2>
+                    <p>Focamos em pilares essenciais para o desenvolvimento social e a dignidade humana.</p>
+                    
+                    <div class="grid-12-col">
+                        
+                        <!-- Card Educação -->
+                        <article class="card">
+                            <i class="fas fa-graduation-cap" style="font-size: 40px; color: var(--cor-primaria); margin-bottom: 10px;"></i>
+                            <h3>Educação para o Futuro</h3>
+                            <p>Financiamos materiais, bolsas de estudo e aulas de reforço para crianças e jovens em comunidades carentes.</p>
+                            <a href="projetos.html" style="margin-top: auto;">Ver Projeto</a>
+                        </article>
+                        
+                        <!-- Card Saúde -->
+                        <article class="card">
+                            <i class="fas fa-heartbeat" style="font-size: 40px; color: var(--cor-erro); margin-bottom: 10px;"></i>
+                            <h3>Acesso à Saúde Básica</h3>
+                            <p>Organizamos campanhas de vacinação, distribuição de kits de higiene e exames preventivos em áreas remotas.</p>
+                            <a href="projetos.html" style="margin-top: auto;">Ver Projeto</a>
+                        </article>
+
+                        <!-- Card Sustentabilidade -->
+                        <article class="card">
+                            <i class="fas fa-leaf" style="font-size: 40px; color: var(--cor-secundaria); margin-bottom: 10px;"></i>
+                            <h3>Meio Ambiente e Renda</h3>
+                            <p>Apoiamos iniciativas de reciclagem e hortas comunitárias, gerando renda sustentável e consciência ambiental.</p>
+                            <a href="projetos.html" style="margin-top: auto;">Ver Projeto</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="cadastro-cta" class="section-padding container text-center">
+                <h2>Seja Parte da Mudança</h2>
+                <p style="max-width: 700px; margin: 0 auto 32px;">Ao se cadastrar, você recebe nossas newsletters, fica por dentro dos eventos e acompanha o impacto real das nossas ações.</p>
+                <a href="cadastro.html" class="cta-button primary" style="font-size: var(--tamanho-lg); padding: 18px 40px;">Começar Agora!</a>
+            </section>
+        </main>
+    </div>
+    <!-- FIM DO CONTAINER SPA -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="contato.html">Política de Privacidade</a></p>
+            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
         </div>
     </footer>
-    
-    <!-- Script para funcionalidade do menu hambúrguer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mainMenu = document.getElementById('main-menu');
-            const dropdowns = document.querySelectorAll('.dropdown > a');
 
-            menuToggle.addEventListener('click', function() {
-                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-                menuToggle.setAttribute('aria-expanded', !isExpanded);
-                mainMenu.classList.toggle('active');
-            });
-
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    if (window.innerWidth < 768) { 
-                        e.preventDefault(); 
-                        const parentLi = this.closest('.dropdown');
-                        parentLi.classList.toggle('active');
-                        this.setAttribute('aria-expanded', parentLi.classList.contains('active'));
-                    }
-                });
-            });
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth >= 768) {
-                    mainMenu.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
-                }
-            });
-        });
-    </script>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

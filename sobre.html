@@ -11,9 +11,9 @@
     
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
-            </a>
+            <a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>
             
             <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
                 &#9776; 
@@ -40,7 +40,8 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <div id="main-content" class="flex-grow-1">
+        <main>
         <section id="sobre-a-ong" class="container section-padding" aria-labelledby="sobre-titulo">
             <h1 id="sobre-titulo">Nossa Missão e Transparência</h1>
             
@@ -51,7 +52,7 @@
             <div class="grid-12-col">
                 <div style="grid-column: span 12; @media (min-width: 768px) { grid-column: span 6; }">
                     <h3>Quem Somos</h3>
-                    <p>A Facilita ONG nasceu em 2018 com o objetivo de simplificar o processo de doação e canalizar recursos e esforços diretamente para projetos sociais de alto impacto. Somos uma equipe enxuta de profissionais dedicados, unidos pela crença de que a transparência e a tecnologia são chaves para uma filantropia eficiente.</p>
+                    <p>A Facilita ONG nasceu com o objetivo de simplificar o processo de doação e canalizar recursos e esforços diretamente para projetos sociais de alto impacto. Somos uma equipe enxuta de profissionais dedicados, unidos pela crença de que a transparência e a tecnologia são chaves para uma filantropia eficiente.</p>
                 </div>
                 <div style="grid-column: span 12; @media (min-width: 768px) { grid-column: span 6; }">
                     <h3>Missão e Valores</h3>
@@ -62,6 +63,7 @@
             <a href="contato.html" class="cta-button primary" style="margin-top: var(--espaco-lg);">Entre em Contato</a>
         </section>
     </main>
+    </div>
 
     <footer>
         <div class="container">
@@ -102,4 +104,6 @@
         });
     </script>
 </body>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
 </html>

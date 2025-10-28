@@ -12,7 +12,9 @@
 <body>
     <header>
         <nav aria-label="Navegação principal do site">
-            <a href="index.html" class="logo">ONG logo</a>
+            <a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>
             <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">&#9776;</button>
             <ul id="main-menu">
                 <li><a href="projetos.html">Projetos</a></li>
@@ -42,12 +44,13 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <div id="main-content" class="flex-grow-1">
+        <main>
         <section id="cadastro-form-completo" aria-labelledby="cadastro-titulo">
             <h1 id="cadastro-titulo">Formulário de Cadastro Completo</h1>
             <p class="intro-text">Preencha seus dados para se tornar um membro oficial da nossa comunidade. Suas informações são tratadas com total segurança.</p>
 
-            <form action="#" method="POST" class="complex-form">
+            <form action="#" method="POST" class="complex-form" data-validate="true">
                 
                 <!--Dados Pessoais e de Contato -->
                 <fieldset>
@@ -103,12 +106,17 @@
 
                 <button type="submit" class="cta-button primary submit-cadastro">Finalizar Cadastro</button>
             </form>
+
         </section>
     </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | Design Mobile-First</p>
     </footer>
+    <script src="js/validation.js"></script>
     <script src="js/main.js"></script>
+</body>
+</html>
 </body>
 </html>

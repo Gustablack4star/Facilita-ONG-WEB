@@ -3,106 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilita ONG - Seja Voluntário</title>
+    <title>Voluntariado - Faça a Diferença com a Facilita ONG</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- CABEÇALHO -->
     <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
-            </a>
+        <div class="container">
+            <a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>
             
-            <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
-                &#9776; <!-- Ícone de hambúrguer -->
-            </button>
-            
-            <!-- MENU PRINCIPAL-->
-            <ul id="main-menu" role="menubar">
-                <li role="none"><a href="index.html" role="menuitem">Início</a></li>
-                
-                <!-- ITEM COM DROPDOWN -->
-                <li class="dropdown" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                        Causas <span class="arrow">&#9662;</span> 
-                    </a>
-                    <!-- SUBMENU -->
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="none"><a href="projetos.html" role="menuitem">Projetos Atuais</a></li>
-                        <li role="none"><a href="voluntariado.html" role="menuitem">Voluntariado</a></li>
-                        <li role="none"><a href="doacoes.html" role="menuitem">Como Doar</a></li>
-                    </ul>
-                </li>
-                
-                <li role="none"><a href="sobre.html" role="menuitem">Sobre Nós</a></li>
-                <li role="none"><a href="contato.html" role="menuitem">Contato</a></li>
-                <li role="none"><a href="cadastro.html" role="menuitem" class="cta-button primary">Cadastre-se</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- FIM DO CABEÇALHO -->
+            <nav>
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-    <!-- SEÇÃO PRINCIPAL -->
-    <main id="main-content">
-        <section id="voluntariado-info" class="container section-padding" aria-labelledby="voluntariado-titulo">
-            <h1 id="voluntariado-titulo" class="text-center">Junte-se ao Nosso Time de Voluntários</h1>
-            <p class="text-center">Sua dedicação é o coração da Facilita ONG. Encontre a área que mais combina com você!</p>
-            
-            <div class="card" style="margin-top: var(--espaco-xl);">
-                <h2>Áreas de Atuação</h2>
-                <ul style="list-style: disc; margin-left: var(--espaco-lg);">
-                    <li>**Apoio Escolar:** Reforço em português e matemática.</li>
-                    <li>**Distribuição:** Auxílio na separação e entrega de alimentos e kits.</li>
-                    <li>**Administrativo:** Ajuda na organização de documentos e eventos.</li>
-                    <li>**Comunicação:** Produção de conteúdo e gestão de redes sociais.</li>
+                <ul id="main-menu">
+                    <li><a href="index.html">Início</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="doacoes.html">Causas <span class="arrow"><i class="fas fa-chevron-down"></i></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html">Nossos Projetos</a></li>
+                            <li><a href="doacoes.html">Doações</a></li>
+                            <li><a href="voluntariado.html">Voluntariado</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="cadastro.html" class="cta-button primary">Cadastre-se</a></li>
                 </ul>
-                <p style="margin-top: var(--espaco-md);">Para se candidatar, preencha o formulário de Cadastro completo, indicando suas áreas de interesse e disponibilidade.</p>
-                <a href="cadastro.html" class="cta-button primary">Ir para o Cadastro</a>
-            </div>
-        </section>
-    </main>
+            </nav>
+        </div>
+    </header>
 
-    <!--FOOTEr-->
+    <!-- CONTAINER PRINCIPAL DO SPA -->
+    <div id="main-content" class="flex-grow-1">
+        <main>
+            <section class="section-padding container">
+                <h1 class="text-center">Seja um Voluntário e Transforme Realidades</h1>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 48px;">O trabalho voluntário é o coração da Facilita ONG. Suas habilidades, tempo e paixão são essenciais para levar apoio às comunidades que mais precisam.</p>
+
+                <div class="grid-12-col">
+                    <div class="card" style="grid-column: span 8;">
+                        <h2>Oportunidades e Áreas de Atuação</h2>
+                        <p>Temos diversas formas de atuação, que se adequam à sua disponibilidade e competências. O voluntariado pode ser presencial ou remoto.</p>
+                        
+                        <h3>Áreas em Destaque:</h3>
+                        <ul>
+                            <li>**Educação:** Acompanhamento escolar e oficinas de leitura.</li>
+                            <li>**Saúde:** Organização de campanhas e triagem básica.</li>
+                            <li>**Logística:** Distribuição de doações e organização de estoque.</li>
+                            <li>**Digital:** Criação de conteúdo, gestão de redes sociais e desenvolvimento web.</li>
+                        </ul>
+
+                        <h3 style="margin-top: 24px;">Compromisso</h3>
+                        <p>Não exigimos dedicação diária, mas pedimos comprometimento com as tarefas assumidas. Acreditamos na força do trabalho contínuo e colaborativo.</p>
+
+                        <a href="#formulario" class="cta-button primary" style="align-self: flex-start; margin-top: 20px;">Manifestar Interesse</a>
+                    </div>
+                    
+                    <!-- Formulário de Inscrição em Voluntariado -->
+                    <div id="formulario" class="card" style="grid-column: span 4;">
+                        <h3 class="text-center" style="margin-bottom: 24px;">Inscreva-se Agora</h3>
+                        
+                        <!-- Formulário com a ativação da validação JS -->
+                        <form action="#" method="POST" data-validate="true">
+                            
+                            <div class="field-group">
+                                <label for="vol-nome">Seu Nome <span style="color: var(--cor-erro);">*</span></label>
+                                <input type="text" id="vol-nome" name="nome" required>
+                            </div>
+                            
+                            <div class="field-group">
+                                <label for="vol-email">E-mail <span style="color: var(--cor-erro);">*</span></label>
+                                <input type="email" id="vol-email" name="email" required>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="vol-area">Área de Interesse <span style="color: var(--cor-erro);">*</span></label>
+                                <select id="vol-area" name="area" required>
+                                    <option value="">Selecione uma Área</option>
+                                    <option value="digital">Voluntariado Digital</option>
+                                    <option value="presencial">Voluntariado Presencial (SP)</option>
+                                    <option value="educacao">Apoio à Educação</option>
+                                    <option value="logistica">Logística/Distribuição</option>
+                                </select>
+                            </div>
+
+                            <div class="field-group">
+                                <label for="vol-mensagem">Conte-nos sobre sua disponibilidade e habilidades:</label>
+                                <textarea id="vol-mensagem" name="mensagem" rows="4"></textarea>
+                            </div>
+
+                            <div class="field-group" style="margin-top: 24px;">
+                                <button type="submit" class="cta-button secondary" style="width: 100%;">Enviar Inscrição</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Fim do Formulário -->
+
+                </div>
+            </section>
+        </main>
+    </div>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="contato.html">Política de Privacidade</a></p>
+            <p>&copy; 2024 Facilita ONG. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
         </div>
     </footer>
-    
-    <!-- Script para funcionalidade do menu hambúrguer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mainMenu = document.getElementById('main-menu');
-            const dropdowns = document.querySelectorAll('.dropdown > a');
 
-            menuToggle.addEventListener('click', function() {
-                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-                menuToggle.setAttribute('aria-expanded', !isExpanded);
-                mainMenu.classList.toggle('active');
-            });
-
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    if (window.innerWidth < 768) { 
-                        e.preventDefault(); 
-                        const parentLi = this.closest('.dropdown');
-                        parentLi.classList.toggle('active');
-                        this.setAttribute('aria-expanded', parentLi.classList.contains('active'));
-                    }
-                });
-            });
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth >= 768) {
-                    mainMenu.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
-                }
-            });
-        });
-    </script>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

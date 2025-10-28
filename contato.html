@@ -11,9 +11,9 @@
     
     <header>
         <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
-            </a>
+            <a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>
             
             <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
                 &#9776; 
@@ -40,12 +40,13 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <div id="main-content" class="flex-grow-1">
+        <main>
         <section id="contato-info" class="container section-padding" aria-labelledby="contato-titulo">
             <h1 id="contato-titulo" class="text-center">Fale Conosco</h1>
             <p class="text-center">Envie suas dúvidas, sugestões ou pedidos de informação através do formulário abaixo.</p>
             
-            <form action="#" method="POST" style="max-width: 600px; margin: var(--espaco-xl) auto;">
+            <form action="#" method="POST" class="complex-form" data-validate="true">
                 <div class="field-group">
                     <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" name="nome" required>
@@ -81,6 +82,8 @@
             </form>
         </section>
     </main>
+    </div>
+    
 
     <footer>
         <div class="container">
@@ -120,5 +123,10 @@
             });
         });
     </script>
+    <!-- INCLUSÃO DOS ARQUIVOS JAVASCRIPT -->
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
 </body>
 </html>

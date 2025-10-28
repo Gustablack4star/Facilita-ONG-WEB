@@ -11,10 +11,9 @@
         <header>
         <nav class="container">
             <!-- LOGO DO SITE -->
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo-facilita-ong.png" alt="Logo da Facilita ONG" class="header-logo">
-            </a>
-            
+            <a href="index.html" class="logo header-logo">
+    <span class="logo-emoji">🌍</span> Facilita ONG
+</a>
             <!-- BOTÃO HAMBÚRGUER-->
             <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
                 &#9776; <!-- Ícone de hambúrguer -->
@@ -46,7 +45,8 @@
     <!-- FIM DO HEADER -->
 
     <!--MAIN-->
-    <main id="main-content">
+    <div id="main-content" class="flex-grow-1">
+        <main>
         <section id="doacoes" class="container section-padding" aria-labelledby="doacao-titulo">
             <h1 id="doacao-titulo" class="text-center">Sua Doação Transforma Vidas</h1>
             <p class="text-center">Escolha a melhor forma de contribuir. Toda ajuda é transparente e direcionada aos nossos projetos.</p>
@@ -75,6 +75,7 @@
             </div>
         </section>
     </main>
+    </div>
 
     <!-- RODAPÉ -->
     <footer>
@@ -117,4 +118,6 @@
         });
     </script>
 </body>
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
 </html>
