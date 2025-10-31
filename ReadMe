@@ -1,0 +1,28 @@
+🤝 Facilita ONG
+
+Visão Geral do Projeto
+O Facilita ONG é uma plataforma web dedicada a simplificar a conexão entre Organizações Não Governamentais (ONGs) verificadas e pessoas dispostas a ajudar, seja através de voluntariado, doações ou apoio material. Nosso objetivo é aumentar a visibilidade das causas sociais e facilitar a gestão e a transparência para as ONGs.
+
+🌟 Principais Funcionalidades
+Este projeto implementa uma arquitetura de Single Page Application (SPA) com foco em performance e acessibilidade.
+
+Navegação SPA:
+Carregamento de conteúdo dinâmico sem recarregar a página (utilizando history.pushState).
+Proporciona uma experiência de usuário rápida e fluida.
+Validação de Formulários em Tempo Real:
+Uso de JavaScript para validar campos (e-mail, obrigatoriedade, complexidade de senha, etc.) antes do envio (arquivo js/validation.js).
+Fornece feedback visual e mensagens de erro (WCAG) instantâneas para o usuário.
+
+Acessibilidade (WCAG):
+Implementação de um Botão de Alto Contraste (#high-contrast-toggle) para melhorar a legibilidade para usuários com bixa visão.
+Uso de atributos ARIA (aria-expanded, aria-pressed, aria-invalid) para garantir que leitores de tela compreendam os componentes interativos (menu, botões).
+
+Design Responsivo:
+Layout totalmente adaptável a dispositivos móveis, tablets e desktops (utilizando classes do Tailwind CSS).
+🛠️ Tecnologias Utilizadas
+HTML5: Estrutura semântica do projeto.
+Tailwind CSS: Framework utilitário para estilização rápida e responsiva.
+Customização de cores para refletir a temática social.
+JavaScript (ES6+): Lógica principal, SPA e funcionalidades de acessibilidade (js/main.js).
+JavaScript (ES6+): Lógica de validação de formulários (js/validation.js).
+Lucide Icons: Biblioteca de ícones simples e leves.
